@@ -1,0 +1,31 @@
+// Run Disk Partition Utility
+diskpart
+
+// Lisk available disks
+list disk
+
+// Replace X with the USB drive letter you would like to make bootable
+select disk x
+
+// Erease all data from the USB drive
+clean
+
+// Create new primary partition
+create partition primary
+
+// Lisk available partitions
+list partition
+
+// Select the created partition
+select partition 1
+
+// Format the partition
+format fs=ntfs quick
+
+// Set the partition as active
+active
+
+// Close the Disk Partition Utility
+exit
+
+diskpart /s commands.txt
