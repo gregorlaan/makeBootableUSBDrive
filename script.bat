@@ -18,6 +18,7 @@ SET /P _select_drive= Please enter drive letter:
     echo create partition primary
     echo select partition 1
     echo format fs=ntfs quick
+    echo convert mbr
     echo active
     echo exit
 ) | diskpart
